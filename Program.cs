@@ -99,6 +99,47 @@ namespace Collections
                 Console.Write(juliusScore);
             }
 
+            //-------- Queues First In, First Out
+            //FIFO
+            //Not random access
+
+            var students = new Queue<string>();
+
+            students.Enqueue("Mary");
+            students.Enqueue("Bill");
+            students.Enqueue("Paul");
+            students.Enqueue("Sandra");
+            students.Enqueue("Thomas");
+
+            //spits out Mary
+            // var firstStudent = students.Peek();
+            // Console.WriteLine(firstStudent);
+
+            //below is not working...
+            var firstStudent = students.Dequeue();
+            Console.WriteLine(firstStudent);
+
+            students.Clear();
+            Console.WriteLine($"There are now {students.Count} students in the queue.");
+
+            /* - Interfaces are collections
+            IAnimal
+    
+             - are interfaces of things the eat, sleep and run
+            IAnimal is a Generic type
+            Bear, Cat, Dolphin are concrete types that exhibit the behaviors listed.
+            
+            Takeway
+            • Different types in C# share common behaviors. 
+              An Interface allows these types to share behaviors.
+            • If two things share a common Interface, they work similarly, 
+              and each does the things the Interface describes.
+            • We'll see them a lot more than we create them.
+            • When we see that some type is an ISomething, the I is a   
+              convention that says, "This is an Interface".
+            
+            */
+
 
 
         }

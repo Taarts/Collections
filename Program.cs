@@ -42,7 +42,7 @@ namespace Collections
             var indexOfFiftyFive = scores.IndexOf(55);
             Console.WriteLine($"Found 55 at index {indexOfFiftyFive}");
 
-            //produces  "-1" (SENTINAL VALUE)as an exception
+            //produces  "-1" (SENTINEL VALUE)as an exception
             var indexOfFortytwo = scores.IndexOf(42);
             Console.WriteLine($"Found 42 at index {indexOfFortytwo}");
 
@@ -68,11 +68,36 @@ namespace Collections
 
             scores.Sort();
 
+            // defining a Dictionary
+            //Tracking related Data
 
 
+            var playerScores = new Dictionary<string, int>();
+            playerScores.Add("Mary Rose", 1_452_625); //"_" denotes space or comma
+
+            //LookUp
+
+            //LookUp & Change
+            playerScores["Mary Rose"] = 3;
+
+            //LookUp Pickle's score, if not present will ADD it
+            playerScores["Pickle"] = 100;
+
+            var maryPlayerScore = playerScores["Mary Rose"];
+            Console.WriteLine(maryPlayerScore);
 
 
+            var picklePlayerScore = playerScores["Pickle"];
+            Console.WriteLine(picklePlayerScore);
 
+            //hasKey
+
+            var hasKey = playerScores.ContainsKey("Julius Cesar");
+            if (hasKey)
+            {
+                var juliusScore = playerScores["Julius Cesar"];
+                Console.Write(juliusScore);
+            }
 
 
 

@@ -11,7 +11,7 @@ namespace Collections
 
             //initializer list
             var names = new List<string>()
-            { "Gaga", "Bey", "Lizzo" , "Bowie" };
+          { "Gaga", "Bey", "Lizzo" , "Bowie" };
 
             var firstName = names[0];
             var secondName = names[3];
@@ -86,14 +86,13 @@ namespace Collections
             var maryPlayerScore = playerScores["Mary Rose"];
             Console.WriteLine(maryPlayerScore);
 
-
             var picklePlayerScore = playerScores["Pickle"];
             Console.WriteLine(picklePlayerScore);
 
             //hasKey
 
             var hasKey = playerScores.ContainsKey("Julius Cesar");
-            if (hasKey)
+            if (hasKey) //boolean if "TRUE"
             {
                 var juliusScore = playerScores["Julius Cesar"];
                 Console.Write(juliusScore);
@@ -124,11 +123,11 @@ namespace Collections
 
             /* - Interfaces are collections
             IAnimal
-    
-             - are interfaces of things the eat, sleep and run
+
+            - are interfaces of things the eat, sleep and run
             IAnimal is a Generic type
             Bear, Cat, Dolphin are concrete types that exhibit the behaviors listed.
-            
+
             Takeway
             • Different types in C# share common behaviors. 
               An Interface allows these types to share behaviors.
@@ -137,11 +136,110 @@ namespace Collections
             • We'll see them a lot more than we create them.
             • When we see that some type is an ISomething, the I is a   
               convention that says, "This is an Interface".
-            
+
+         /* -----------Control the Flow
+              Boolean
+              && = AND
+              || = OR
+
+            _____IF - ELSE IF______
+
+            if (name == "Paul") {
+              Console.WriteLine("Here");
+              } else if (name == "Dorothy") {
+                Console.WriteLine("Also here");
+              } else if (name == "Sam") {
+                Console.WriteLine("Here again");
+              } else {
+                Console.WriteLine("Didn't find anything");
+              }
+
+              ----------- SWITCH ---------
+              **** Works as if railway signaling ****
+              switch (name)
+                {
+                 case "Paul":
+                 Console.WriteLine("Here");
+                 break;
+
+                 case "Dorothy":
+                 Console.WriteLine("Also Here");
+                 break;
+
+                 case "Sam":
+                 Console.WriteLine("Here Again");
+                 break;
+
+                 default:
+                 Console.WriteLine("Didn't find anything");
+                 break;
+                }
+              ****Below the first three work like an OR statement
+              switch (name)
+              {
+                case "Paul":
+                case "Peter":
+                case "Mary":
+                Console.WriteLine("Here");
+                break;
+
+                case "Dorothy":
+                Console.WriteLine("Also Here");
+                break;
+
+                case "Sam":
+                Console.WriteLine("Here Again");
+                break;
+
+                default:
+                Console.WriteLine("Didn't find anything");
+                break; 
+                }
+                **Conditionals 
+                Below is assigning grades to each, given the top grade score "=95"
+                var score = 95;
+                switch (score)
+                {
+                 case < 65:
+                 Console.WriteLine("F");
+                 break;
+
+                case < 70:
+                Console.WriteLine("D");
+                break;
+
+                case < 80:
+                Console.WriteLine("C");
+                break;
+
+                case < 90:
+                Console.WriteLine("B");
+                break;
+
+                case >= 90:
+                Console.WriteLine("A");
+                break;
+
+                default:
+                Console.WriteLine("Hmmm, I don't recognize this score");
+                break;
+                }
+                
+            Console.Write("What is your name? ");
+            var name = Console.ReadLine();
+
+            while (name != "quit") // as long as user doesn't type "quit" it will 
+                                    // keep asking the question
+                                    //only declare a VAR once
+                                    //var is shorthand
+            {
+              Console.WriteLine($"Hello {name}");
+
+              Console.Write("What is your name? ");
+              name = Console.ReadLine();
+              
+            }
             */
-
-
-
         }
     }
 }

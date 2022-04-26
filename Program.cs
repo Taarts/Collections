@@ -224,22 +224,22 @@ namespace Collections
                 Console.WriteLine("Hmmm, I don't recognize this score");
                 break;
                 }
-                
+            */
             Console.Write("What is your name? ");
             var name = Console.ReadLine();
 
             while (name != "quit") // as long as user doesn't type "quit" it will 
-                                    // keep asking the question
-                                    //only declare a VAR once
-                                    //var is shorthand
+                                   // keep asking the question
+                                   //only declare a VAR once
+                                   //var is shorthand
             {
-              Console.WriteLine($"Hello {name}");
+                Console.WriteLine($"Hello {name}");
 
-              Console.Write("What is your name? ");
-              name = Console.ReadLine();
-              
+                Console.Write("What is your name? ");
+                name = Console.ReadLine();
+
             }
-            */
+
         }
     }
 }
